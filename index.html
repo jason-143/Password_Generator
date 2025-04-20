@@ -1,0 +1,107 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Generate strong and secure passwords with our online password generator tool. Easily create random passwords with customizable options for length, complexity, and character types. Keep your accounts safe with unique and unguessable passwords.">
+    <meta name="keywords"
+        content="password generator, online password generator, strong passwords, secure passwords, random password generator, password strength, password security, password complexity, password manager, password tool, password strength checker">
+    <link rel="shortcut icon" href="padlock.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/script.js"></script>
+    <script src="./js/check.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Simple password generator</title>
+</head>
+
+<body>
+    <div class="main">
+        <div class="ads top-left">
+
+        </div>
+        <div class="content">
+            <div id="feedback" class="feedback"><!--feedback for clipboard copy--></div>
+            <div id="output">
+                <br><br><br><br><br><input maxlength="24" type="text" name="ouput" id="result" readonly
+                    class="output_pass"><br>
+                <button class="output_pass" onclick="CopytoClipboard()" id="copy_password" title="Copy to clipboard"
+                    style="font-family:Arial, FontAwesome;">&#xf0c5;</button><br><br><br>
+            </div>
+            <div id="customize">
+                <div class="custom">
+                    <input type="checkbox" onchange="generatePassword()" checked class="cbox" id="number">
+                    <label class="custom_label" for="number">Number</label>
+                </div>
+                <div class="custom">
+                    <input type="checkbox" onchange="generatePassword()" class="cbox" id="char">
+                    <!-- Default Unchecked -->
+                    <label class="custom_label" for="char">Symbols</label><br>
+                </div>
+                <div class="custom">
+                    <input type="checkbox" onchange="generatePassword()" checked class="cbox" id="UPPERCASE">
+                    <label class="custom_label" for="UPPERCASE">Uppercase</label><br>
+                </div>
+                <div class="custom">
+                    <input type="checkbox" onchange="generatePassword()" checked class="cbox" id="lowercase">
+                    <label class="custom_label" for="lowercase">Lowercase</label><br>
+                </div>
+            </div>
+            <div id="click">
+                <label id="value_holder">12</label><br>
+                <input type="range" title="Password size" oninput="getRange(),generatePassword()" value="12"
+                    name="password_ranger" max="24" min="6" id="range"><br><br>
+                <button type="button" id="generate" onclick="generatePassword()" title="Generate Password"
+                    style="font-family:Arial, FontAwesome;">&#xf085; Generate</button><br><br><br><br>
+            </div>
+            <div id="intro">
+                <br><br><br><br><br>
+                <br>
+                <p>Passwords serve as the primary line of defense in safeguarding our digital identities, confidential
+                    information, and online
+                    accounts. They are the digital keys that grant access to personal data, financial records, and
+                    communication platforms.
+                    However, not all passwords are created equal. Understanding the concepts of password strength and
+                    generation is crucial in ensuring the security of our online presence.</p>
+                <br><br>
+                <h1>Password Strength:</h1><br>
+                <p>The strength of a password is determined by its ability to withstand various malicious attacks, such
+                    as brute-force attacks, dictionary attacks, and social engineering. A strong password possesses the
+                    following characteristics:<br>
+                    <br><strong>Length:</strong> Longer passwords are generally more secure as they provide a larger
+                    search space for attackers to traverse. A recommended minimum length is often considered to be at
+                    least 12 characters.<br>
+                    <br><strong>Complexity:</strong> A strong password incorporates a diverse range of characters,
+                    including uppercase letters, lowercase letters, numbers, and special characters. This complexity
+                    adds layers of entropy, making it more difficult for attackers to guess or crack the password.<br>
+                    <br><strong>Randomness:</strong> Randomly generated passwords are typically stronger than those
+                    based on easily guessable patterns or personal information. Randomness ensures that the password is
+                    not susceptible to prediction or dictionary-based attacks.
+                </p>
+                <br><br>
+                <h1>Password Generation:</h1><br>
+                <p>Password generation involves the creation of strong, unique passwords for each online account or
+                    service. There are several methods for generating passwords:<br>
+                    <br><strong>Manual Creation:</strong> Users can manually create passwords by combining random
+                    characters, words, or phrases. While this method offers flexibility, ensuring sufficient randomness
+                    and complexity can be challenging.<br>
+                    <br><strong>Password Managers:</strong> Password managers are tools designed to generate, store, and
+                    autofill complex passwords for users. These tools generate strong, unique passwords for each account
+                    and securely store them in an encrypted vault.<br>
+                    <br><strong>Built-in Generators:</strong> Many online services and platforms offer built-in password
+                    generators that produce strong passwords based on user-defined criteria, such as length and
+                    character set.
+                </p><br><br><br>
+            </div>
+            <div id="footer">
+                <p style="font-size: 10px; text-align: center;">While using Our Service, We do not store any data that generated or any other personal information
+                    that can be used to contact or identify You.</p>
+            </div>
+        </div>
+        <div class="ads bottom-right">
+
+        </div>
+    </div>
+</body>
+
+</html>

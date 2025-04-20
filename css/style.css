@@ -1,0 +1,203 @@
+* {
+    margin: 0;
+    font-size: 14px;
+    color: rgb(108, 108, 108);
+    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+    display: none;
+}
+
+.main {
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-content: space-evenly;
+}
+
+.content {
+    /* background-color: red; */
+    align-content: center;
+    text-align: center;
+    height: auto;
+    width: 60%;
+}
+
+.ads {
+    align-content: center;
+}
+
+#output {
+    padding: 5px;
+    align-items: center;
+}
+
+#result {
+    border: 1px solid rgb(196, 196, 196);
+    font-size: 20px;
+    height: 2pc;
+    width: 100%;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.output_pass {
+    padding: 2pc;
+}
+
+#copy_password,
+#generate_password {
+    border: none;
+    border-radius: 3px;
+    background-color: rgb(36, 130, 238);
+    color: white;
+    font-size: large;
+    padding: 8px;
+    margin: 10px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    transition: 300ms ease-in-out;
+}
+
+#copy_password:active,
+#generate_password:active {
+    color: rgb(75, 150, 235);
+    background-color: aliceblue;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+}
+
+#customize {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.custom {
+    padding: 15px;
+}
+
+.custom_label {
+    font-size: 20px;
+}
+
+.cbox {
+    width: 20px;
+    height: 20px;
+}
+
+#click {
+    padding: 10px;
+}
+
+#generate {
+    background-color: rgb(36, 130, 238);
+    color: white;
+    font-size: large;
+    border: none;
+    border-radius: 3px;
+    padding: 10px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    transition: 300ms ease-in-out;
+}
+
+#generate:active {
+    color: rgb(75, 150, 235);
+    background-color: aliceblue;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+}
+
+#intro,
+p {
+    font-size: 16px;
+    height: auto;
+    text-align: justify;
+    /* background-color: aqua; */
+}
+
+#footer {
+    height: 5vh;
+}
+
+#privacyPolicy {
+    background: none;
+    border:none;
+}
+#privacyPolicy:active {text-decoration: underline;}
+#privacyPolicy:hover {text-decoration: underline;}
+
+h1 {
+    font-size: 18px;
+}
+
+/* CSS for toast message */
+.feedback {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -135px;
+    background-color: rgb(36, 130, 238);
+    color: #fff;
+    text-align: center;
+    border-radius: 4px;
+    padding: 20px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    top: 10px;
+}
+
+.feedback.show {
+    visibility: visible;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@keyframes fadein {
+    from {
+        top: 0;
+        opacity: 0;
+    }
+
+    to {
+        top: 10px;
+        opacity: 1;
+    }
+}
+
+@keyframes fadeout {
+    from {
+        top: 10px;
+        opacity: 1;
+    }
+
+    to {
+        top: 0;
+        opacity: 0;
+    }
+}
+
+/* privacy show */
+/* .privacyContainer {
+    display: none;
+    position:relative;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(195, 195, 195);
+    color: black;
+    text-align: center;
+    border-radius: 4px;
+    padding: 20px;
+    height: 400px;
+    overflow-y:scroll;
+    z-index: 1;
+    bottom: 20px;
+} */
+
+@media all and (max-width: 900px) {
+    .content {
+        width: 100%;
+    }
+
+    .main {
+        margin: 10px;
+    }
+}
